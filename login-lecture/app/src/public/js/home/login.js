@@ -14,7 +14,6 @@ function login() {
    psword : psword.value,
  };
  
- console.log(req);
  fetch("/login",{
    method : "POST", 
    headers: {
@@ -25,7 +24,7 @@ function login() {
   .then((res) => res.json())
   .then((res) => {
     if(res.success) {
-      location.href = "/";
+      location.href = "/"; 
     }else{
       alert(res.msg);
     }
